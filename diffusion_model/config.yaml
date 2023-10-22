@@ -1,0 +1,9 @@
+training_parameters:
+  batch_size: 32
+  img_size: 96
+  epochs: 100
+
+diffusion_betas_parameters:
+  steps: 200
+  start: 0.004
+  end: 0.06
