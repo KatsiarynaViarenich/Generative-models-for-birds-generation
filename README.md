@@ -1,4 +1,4 @@
-# Generative-models-for-birds-generation
+# Generative models for birds generation
 A diffusion model written from scratch for bird image generation.
  
 The dataset:
