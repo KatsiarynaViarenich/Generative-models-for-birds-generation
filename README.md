@@ -1,5 +1,10 @@
 # Generative-models-for-birds-generation
-A diffusion model written from scratch for bird images generation.
+A diffusion model written from scratch for bird image generation.
+ 
+The dataset:
+https://www.kaggle.com/datasets/gpiosenka/100-bird-species
+
+To put all the images in one folder after loading the dataset, run the shell script located in data/birds_dataset.
 
 Created with the help of the following resources:
 - https://github.com/lucidrains/denoising-diffusion-pytorch
