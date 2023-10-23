@@ -15,7 +15,7 @@ def get_reverse_transforms():
         transforms.Lambda(lambda t: (t + 1) / 2),
         transforms.Lambda(lambda t: t.permute(1, 2, 0)),
         transforms.Lambda(lambda t: t * 255.),
-        transforms.Lambda(lambda t: t.numpy().astype(np.uint8)),
+        transforms.Lambda(lambda t: t.cpu().numpy().astype(np.uint8)),
         transforms.ToPILImage(),
     ])
     return reverse_transforms

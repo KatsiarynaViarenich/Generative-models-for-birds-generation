@@ -1,3 +1,5 @@
+import os
+
 import torch
 import torch.nn.functional as F
 import yaml
@@ -6,7 +8,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from diffusion_model.diffusion_constants import steps
-from diffusion_model.noise_forward_process import forward_diffusion_sample
+from diffusion_model.noise_forward_process import forward_diffusion_sample, show_tensor_image
 from diffusion_model.sampling import sample_plot_image
 from diffusion_model.birds_dataset import BirdsDataset
 from diffusion_model.transforms import get_transforms
@@ -53,6 +55,8 @@ def train():
             if epoch % 5 == 0 and step == 0:
                 print(f"Epoch {epoch} | step {step:03d} Loss: {loss.item()} ")
                 sample_plot_image(img_size, device, model)
+        checkpoint_filename = os.path.join("../models", f"model_epoch_{epoch}.pt")
+        torch.save(model.state_dict(), checkpoint_filename)
 
 
 if __name__ == "__main__":

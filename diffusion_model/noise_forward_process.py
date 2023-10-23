@@ -28,7 +28,6 @@ def show_tensor_image(image):
     # TODO: test with single image
     if len(image.shape) == 4:
         image = image[0, :, :, :]
-        print("HERE was the image")
     plt.imshow(reverse_transforms(image))
 
 
@@ -52,6 +51,6 @@ if __name__ == "__main__":
     batch = batch.to(device)
     x_0 = batch[0]
     x_0 = x_0.reshape(1, 3, 96, 96)
-    x_t, noise = forward_diffusion_sample(x_0, torch.tensor([150]), device)
-
-    show_tensor_image(x_t[0])
+    x_t, noise = forward_diffusion_sample(x_0, torch.tensor([75]), device)
+    show_tensor_image(x_t)
+    plt.show()
