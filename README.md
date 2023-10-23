@@ -12,6 +12,8 @@ Created with the help of the following resources:
 - https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb
 - https://tree.rocks/make-diffusion-model-from-scratch-easy-way-to-implement-quick-diffusion-model-e60d18fd0f2e
 
-The training is in process. The results will be shown soon.
+After training on ten epochs I got the following results:
+
+![Results for diffusion model](screenshots/diffusion_model_results.jpg)
 
 Next steps: comparing the performance of diffusion models with Normalizing Flows and GANs. 
